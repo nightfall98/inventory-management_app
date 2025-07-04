@@ -8,6 +8,7 @@
 .buildlog/
 .history
 .svn/
+migrate_working_dir/
 
 # IntelliJ related
 *.iml
@@ -22,16 +23,17 @@
 
 # Flutter/Dart/Pub related
 **/doc/api/
-**/ios/Flutter/.last_build_id
-.dart_tool/
-.flutter-plugins
-.flutter-plugins-dependencies
-.packages
-.pub-cache/
-.pub/
-/build/
-
-# Web related
+**/ios/Flutter/App.framework
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/ephemeral/
+**/ios/Flutter/app.flx
+**/ios/Flutter/app.zip
+**/ios/Flutter/flutter_assets/
+**/ios/Flutter/flutter_export_environment.sh
+**/ios/ServiceDefinitions.json
+**/ios/Runner/GeneratedPluginRegistrant.*
 
 # Symbolication related
 app.*.symbols
@@ -44,54 +46,68 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-# Firebase related
-**/google-services.json
-**/GoogleService-Info.plist
+# Build outputs
+/build/
+/windows/flutter/ephemeral/
 
-# Environment variables
-.env
-.env.local
-.env.production
+# Firebase configuration files (keep template but ignore sensitive versions)
+# Uncomment if you want to ignore Firebase config files
+# /android/app/google-services.json
+# /ios/Runner/GoogleService-Info.plist
+# /lib/firebase_options.dart
 
-# SQLite databases
-*.db
-*.sqlite
-*.sqlite3
+# Local configuration
+/android/local.properties
+/android/key.properties
 
-# Local data
-data/
+# Web build output
+# /docs/
 
-# Windows
-Thumbs.db
-ehthumbs.db
-Desktop.ini
+# Windows build artifacts
+/windows/flutter/generated_plugin_registrant.cc
+/windows/flutter/generated_plugin_registrant.h
 
-# macOS
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# Linux
-*~
-
-# APK files (keep built APKs out of version control)
-*.apk
-*.aab
-
-# iOS
-**/ios/Pods/
-**/ios/.symlinks/
-**/ios/Flutter/App.framework
-**/ios/Flutter/Flutter.framework
-**/ios/Flutter/Generated.xcconfig
-**/ios/Flutter/app.flx
-**/ios/Flutter/app.zip
-**/ios/Flutter/flutter_assets/
-**/ios/ServiceDefinitions.json
-**/ios/Runner/GeneratedPluginRegistrant.*
+# macOS build artifacts
+/macos/Flutter/ephemeral/
 
 # Coverage
 coverage/
 
-# Exceptions to above rules.
-!/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
+# Packages
+.packages
+.pub-cache/
+.pub/
+build/
+
+# Flutter repo-specific
+/bin/cache/
+/bin/internal/bootstrap.bat
+/bin/internal/bootstrap.sh
+/bin/mingit/
+/dev/benchmarks/mega_gallery/
+/dev/bots/.recipe_deps
+/dev/bots/android_tools/
+/dev/devicelab/ABresults*.json
+/dev/docs/doc/
+/dev/docs/flutter.docs.zip
+/dev/docs/lib/
+/dev/docs/pubspec.yaml
+/dev/integration_tests/**/xcuserdata
+/dev/integration_tests/**/Pods
+/packages/flutter/coverage/
+version
+analysis_server.snapshot
+
+# Web related
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json

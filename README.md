@@ -1,17 +1,29 @@
-# IMM App - Inventory Movement Management
+# inventory-management_app
 
 A modern Flutter-based inventory management application with Firebase integration and offline
 support.
 
-## 🌐 **Live Demo**
+## 🌐 **Live Demo & Testing**
 
 **Try the app now:
-** [https://nightfall98.github.io/IMM_App/](https://nightfall98.github.io/IMM_App/)
+** [https://yourusername.github.io/inventory-management_app/](https://yourusername.github.io/inventory-management_app/)
 
-### Quick Start:
+### 🧪 **For Testers & Invited Users:**
 
-- **Demo Account**: Username: `admin` / Password: `admin` (local storage)
-- **Firebase Account**: Sign up with any email format (cloud storage)
+**Quick Test Options:**
+
+1. **Demo Account**: Username: `admin` / Password: `admin` (works offline, no setup needed)
+2. **Create Your Own Account**: Sign up with any email format for cloud storage
+3. **Web Testing**: Click the live demo link above - no installation required!
+
+**What to Test:**
+
+- ✅ Add inventory items with different categories
+- ✅ Edit and delete existing items
+- ✅ Search and filter functionality
+- ✅ Dashboard statistics
+- ✅ Sign out and sign back in
+- ✅ Test both online and offline modes
 
 ---
 
@@ -44,7 +56,7 @@ support.
 - **Data Sync**: Automatic synchronization between local and cloud data
 - **User Isolation**: Each user has their own private inventory data
 
-## 🛠️ **Setup Instructions**
+## 🛠️ **Setup Instructions for Developers**
 
 ### **Prerequisites**
 
@@ -57,8 +69,8 @@ support.
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/nightfall98/IMM_App.git
-   cd IMM_App
+   git clone https://github.com/yourusername/inventory-management_app.git
+   cd inventory-management_app
    ```
 
 2. **Install dependencies**
@@ -113,6 +125,31 @@ support.
     - Sign out options in multiple locations
     - Responsive design for different screen sizes
 
+## 🧪 **Testing Checklist for Contributors**
+
+### **Basic Functionality Tests**
+
+- [ ] Login with demo account (`admin`/`admin`)
+- [ ] Create new Firebase account with email
+- [ ] Add items with different categories
+- [ ] Edit existing items
+- [ ] Delete items (confirm deletion dialog)
+- [ ] Search items by name
+- [ ] Filter items by category
+- [ ] View dashboard statistics
+
+### **Platform Tests**
+
+- [ ] Web browser functionality
+- [ ] Mobile responsiveness
+- [ ] Desktop application (if applicable)
+
+### **Data Persistence Tests**
+
+- [ ] Data saves after app restart
+- [ ] Offline functionality works
+- [ ] Firebase sync works when online
+
 ## 🏗️ **Project Structure**
 
 ```
@@ -136,33 +173,6 @@ lib/
     └── item_card.dart       # Item display widget
 ```
 
-## 🔧 **Configuration**
-
-### **Firebase Setup**
-
-1. Go to [Firebase Console](https://console.firebase.google.com)
-2. Create/select your project
-3. Enable Authentication (Email/Password)
-4. Enable Firestore Database
-5. Set Firestore security rules:
-   ```javascript
-   rules_version = '2';
-   service cloud.firestore {
-     match /databases/{database}/documents {
-       match /users/{userId}/{document=**} {
-         allow read, write: if request.auth != null && request.auth.uid == userId;
-       }
-     }
-   }
-   ```
-
-### **Android Configuration**
-
-- Minimum SDK: API 21 (Android 5.0)
-- Target SDK: API 34
-- Compile SDK: API 35
-- Supports multidex for compatibility
-
 ## 📱 **Build Instructions**
 
 ### **Android APK**
@@ -180,7 +190,7 @@ flutter build ios --release
 ### **Web**
 
 ```bash
-flutter build web --release
+flutter build web --release --web-renderer html --base-href /inventory-management_app/
 ```
 
 ### **Desktop**
@@ -201,15 +211,15 @@ flutter build linux --release    # Linux
 
 ## 📄 **License**
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
 
-## 🆘 **Support**
+## 🆘 **Support & Feedback**
 
-For support and questions:
+For support, questions, and feedback:
 
 - Create an issue on GitHub
-- Email: support@imm-app.com
-- Documentation: [Wiki](https://github.com/nightfall98/IMM_App/wiki)
+- Test the app and report bugs
+- Suggest new features via issues
 
 ## 🎯 **Roadmap**
 
