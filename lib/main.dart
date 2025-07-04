@@ -227,7 +227,6 @@ class IMMApp extends StatelessWidget {
             print('No Firebase user - showing login page');
             return const LoginPage(); // Show login page
           }
-          // All changes staged and committed. Use 'git push -u origin main' to push your changes to GitHub.
         },
       ),
     );
