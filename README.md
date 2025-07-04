@@ -3,6 +3,18 @@
 A modern Flutter-based inventory management application with Firebase integration and offline
 support.
 
+## 🌐 **Live Demo**
+
+**Try the app now:
+** [https://nightfall98.github.io/IMM_App/](https://nightfall98.github.io/IMM_App/)
+
+### Quick Start:
+
+- **Demo Account**: Username: `admin` / Password: `admin` (local storage)
+- **Firebase Account**: Sign up with any email format (cloud storage)
+
+---
+
 ## 🚀 Features
 
 ### 📱 **Core Functionality**
@@ -45,8 +57,8 @@ support.
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/imm-app.git
-   cd imm-app
+   git clone https://github.com/nightfall98/IMM_App.git
+   cd IMM_App
    ```
 
 2. **Install dependencies**
@@ -197,7 +209,7 @@ For support and questions:
 
 - Create an issue on GitHub
 - Email: support@imm-app.com
-- Documentation: [Wiki](https://github.com/your-username/imm-app/wiki)
+- Documentation: [Wiki](https://github.com/nightfall98/IMM_App/wiki)
 
 ## 🎯 **Roadmap**
 
